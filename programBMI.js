@@ -1,8 +1,8 @@
 var tinggi,berat,keterangan,bmi;
 function hitung() {
-	tinggi = parseFloat(document.getElementById("ipt_t").value);
+	tinggi = document.getElementById("ipt_t").value;
 	tinggi = tinggi / 100;
-	berat = parseFloat(document.getElementById("ipt_b").value);
+	berat = document.getElementById("ipt_b").value;
 	bmi = berat / (tinggi * tinggi);
 
 	if (bmi >= 30) {
@@ -13,7 +13,7 @@ function hitung() {
 		document.getElementById('keterangan').innerHTML = "Berat badan mu gemuk";
 	}else if ((bmi >= 19) & (bmi <= 24)){
 		document.getElementById('bmi').innerHTML = bmi.toFixed(1);
-		document.getElementById('keterangan').innerHTML = "Berat badan mu kurus";
+		document.getElementById('keterangan').innerHTML = "Berat badan mu Ideal";
 	} else if ((bmi >= 0) & (bmi <= 18)){
 		document.getElementById('bmi').innerHTML = bmi.toFixed(1);
 		document.getElementById('keterangan').innerHTML = "Berat badan mu kurus";
