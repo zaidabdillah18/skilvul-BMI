@@ -4,42 +4,24 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div>
-	<table>
-		<thead>
-			<tr>
-				<th>Program BMI</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Masukan tinggi badan (cm)</td>
-			</tr>
-			<tr>
-				<td><input type="text" id="ipt_t"></td>
-			</tr>
-			<tr>
-				<td>Masukan berat badan (kg)</td>
-			</tr>
-			<tr>
-				<td><input type="text" id="ipt_b"></td>
-			</tr>
-			<tr>
-				<td><button onclick="hitung()">Hitung</button></td>
-			</tr>
-		</tbody>
-		<tfoot>
-			<tr>
-				<td id="bmi">Hasil perhitungan BMI :</td>
-			</tr>
-			<tr>
-				<td>Keterangan :</td>
-			</tr>
-			<tr>
-				<td id="keterangan"></td>
-			</tr>			
-		</tfoot>
-	</table>
+<div class="container">
+	<div class="row">
+		<div class="bmi">		
+		
+				<h1 class="judul">Program Skilvul BMI</h1>
+				<label class="label">Masukan tinggi badan (cm)</label> <br>
+				<input class="input" type="number" id="ipt_t" required> <br>
+				<label class="label">Masukan berat badan (kg)</label> <br>
+				<input class="input" type="number" id="ipt_b" required> <br>
+				<button onclick="hitung()" class="btn" type="submit">Hitung</button>
+		
+			<div class="hasil">
+				<h5>Hasil perhitungan BMI : <span id="bmi"></span></h5>
+				<h5>Keterangan : <span id="keterangan"></span></h5>
+			</div>
+		</div>
+			
+	</div>
 </div>
 <script type="text/javascript" src="programBMI.js"></script>
 </body>
